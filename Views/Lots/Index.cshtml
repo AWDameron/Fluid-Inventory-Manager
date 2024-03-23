@@ -1,0 +1,72 @@
+﻿@model IEnumerable<FIMS2.Models.Lot>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Add New Fluid</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Lot Number</label>
+                @Html.DisplayNameFor(model => model.LotNumber)
+            </th>
+            <th>
+                <label>Fluid Name</label>
+                @Html.DisplayNameFor(model => model.LotName)
+            </th>
+            <th>
+                <label>Total Quantity</label>
+                @Html.DisplayNameFor(model => model.TotalQuantity)
+            </th>
+            <th>
+                <label>Available Quantity</label>
+                @Html.DisplayNameFor(model => model.AvailableQuantity)
+            </th>
+            <th>
+                <label>Notes</label>
+                @Html.DisplayNameFor(model => model.LotNotes)
+            </th>
+            <th>
+                <label>Dates</label>
+                @Html.DisplayNameFor(model => model.DateOnly)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LotNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LotName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalQuantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalQuantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LotNotes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOnly)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.LotNumber">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.LotNumber">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.LotNumber">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

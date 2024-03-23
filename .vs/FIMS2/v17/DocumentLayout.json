@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\views\\lots\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:views\\lots\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\controllers\\lotscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:controllers\\lotscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\controllers\\customerallocationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:controllers\\customerallocationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\models\\customerallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:models\\customerallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\models\\lots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:models\\lots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\views\\lots\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:views\\lots\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\viewmodels\\lotsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:viewmodels\\lotsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\views\\customerallocations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:views\\customerallocations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\database\\fimcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:database\\fimcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\fims2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:fims2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|c:\\users\\awdam\\documents\\projects\\fims2\\fims2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{704D31A9-5851-4776-9EDD-8B0ACA174575}|FIMS2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Lots.cs",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Models\\Lots.cs",
+              "RelativeDocumentMoniker": "Models\\Lots.cs",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Models\\Lots.cs",
+              "RelativeToolTip": "Models\\Lots.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T22:30:26.914Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAkwCgAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-23T22:50:11.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Views\\Lots\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Lots\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Views\\Lots\\Index.cshtml",
+              "RelativeToolTip": "Views\\Lots\\Index.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-23T22:42:55.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LotsController.cs",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Controllers\\LotsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LotsController.cs",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Controllers\\LotsController.cs",
+              "RelativeToolTip": "Controllers\\LotsController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAADwvxkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T23:18:53.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LotsVM.cs",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\ViewModels\\LotsVM.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LotsVM.cs",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\ViewModels\\LotsVM.cs",
+              "RelativeToolTip": "ViewModels\\LotsVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T22:33:36.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomerAllocation.cs",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Models\\CustomerAllocation.cs",
+              "RelativeDocumentMoniker": "Models\\CustomerAllocation.cs",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Models\\CustomerAllocation.cs",
+              "RelativeToolTip": "Models\\CustomerAllocation.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAIwAsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T22:48:52.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerAllocationsController.cs",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Controllers\\CustomerAllocationsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomerAllocationsController.cs",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Controllers\\CustomerAllocationsController.cs",
+              "RelativeToolTip": "Controllers\\CustomerAllocationsController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAD4v0AAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T23:19:44.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Views\\CustomerAllocations\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\CustomerAllocations\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Views\\CustomerAllocations\\Index.cshtml",
+              "RelativeToolTip": "Views\\CustomerAllocations\\Index.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB4AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-21T23:36:12.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Views\\Lots\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Lots\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Views\\Lots\\Create.cshtml",
+              "RelativeToolTip": "Views\\Lots\\Create.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-22T00:01:48.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FIMS2.csproj",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\FIMS2.csproj",
+              "RelativeDocumentMoniker": "FIMS2.csproj",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\FIMS2.csproj",
+              "RelativeToolTip": "FIMS2.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-21T22:33:07.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-14T23:33:21.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FIMContext.cs",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Database\\FIMContext.cs",
+              "RelativeDocumentMoniker": "Database\\FIMContext.cs",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Database\\FIMContext.cs",
+              "RelativeToolTip": "Database\\FIMContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T22:54:17.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T23:19:24.383Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<FIMS2.Models.CustomerAllocation>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantityUsed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lot.LotNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lot.LotName)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuantityUsed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lot.LotNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lot.LotName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.AllocationID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.AllocationID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.AllocationID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
