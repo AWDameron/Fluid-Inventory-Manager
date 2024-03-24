@@ -59,19 +59,59 @@ namespace FIMS2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("AllocationID,CustomerNumber,QuantityUsed,LotNumber")] CustomerAllocation customerAllocation)
         {
-
             try
             {
-                _context.Add(customerAllocation);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
+                if (ModelState.IsValid)
+                {
+                    // Retrieve the corresponding Lot record
+                    var lot = await _context.Lots.FirstOrDefaultAsync(l => l.LotNumber == customerAllocation.LotNumber);
 
+                    if (lot == null)
+                    {
+                        // Lot does not exist
+                        ModelState.AddModelError(string.Empty, "Lot not found.");
+                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
+                        return View(customerAllocation);
+                    }
+
+                    // Check if the QuantityUsed exceeds the TotalQuantity in the lot
+                    if (customerAllocation.QuantityUsed > lot.TotalQuantity)
+                    {
+                        ModelState.AddModelError(nameof(CustomerAllocation.QuantityUsed), "Quantity used exceeds the total quantity available in the lot.");
+                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
+                        return View(customerAllocation);
+                    }
+
+                    // Check if the AvailableQuantity would become negative after deduction
+                    if (lot.AvailableQuantity - customerAllocation.QuantityUsed < 0)
+                    {
+                        ModelState.AddModelError(string.Empty, "Deducting the quantity used would result in a negative available quantity.");
+                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
+                        return View(customerAllocation);
+                    }
+
+                    // Add the CustomerAllocation record to the database
+                    _context.Add(customerAllocation);
+                    await _context.SaveChangesAsync();
+
+                    // Subtract the QuantityUsed from the AvailableQuantity
+                    lot.AvailableQuantity -= customerAllocation.QuantityUsed;
+
+                    // Update the Lot record
+                    _context.Update(lot);
+                    await _context.SaveChangesAsync();
+
+                    return RedirectToAction(nameof(Index));
+                }
+            }
             catch
             {
+                ModelState.AddModelError(string.Empty, "An error occurred while processing your request.");
                 ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
                 return View(customerAllocation);
             }
+
+            return View(customerAllocation);
         }
 
         // GET: CustomerAllocations/Edit/5
