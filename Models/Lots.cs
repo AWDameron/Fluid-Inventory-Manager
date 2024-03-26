@@ -13,6 +13,7 @@ namespace FIMS2.Models
         [Required]
         [DisplayName("Fluid Name")]
         public string LotName { get; set; }
+       
         [DisplayName("Notes")]
         public string LotNotes { get; set; }
         

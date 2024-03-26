@@ -25,6 +25,7 @@ namespace FIMS2.Controllers
             return View(await _context.Lots
                 .Where(x => x.IsActive == true)
                 .ToListAsync());
+             
         }
 
         // GET: Lots/Details/5

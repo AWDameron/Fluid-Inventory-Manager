@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -52,51 +53,50 @@ namespace FIMS2.Controllers
             return View();
         }
 
-        // POST: CustomerAllocations/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AllocationID,CustomerNumber,QuantityUsed,LotNumber")] CustomerAllocation customerAllocation)
+        public async Task<IActionResult> Create([Bind("AllocationID,CustomerNumber,QuantityUsed,LotNumber")] CustomerAllocation CustomerAllocation)
         {
+            ModelState.Remove(nameof(CustomerAllocation.Lot));
             try
             {
                 if (ModelState.IsValid)
                 {
                     // Retrieve the corresponding Lot record
-                    var lot = await _context.Lots.FirstOrDefaultAsync(l => l.LotNumber == customerAllocation.LotNumber);
+                    var lot = await _context.Lots.FirstOrDefaultAsync(l => l.LotNumber == CustomerAllocation.LotNumber);
 
                     if (lot == null)
                     {
                         // Lot does not exist
                         ModelState.AddModelError(string.Empty, "Lot not found.");
-                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
-                        return View(customerAllocation);
+                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", CustomerAllocation.LotNumber);
+                        return View(CustomerAllocation);
                     }
 
                     // Check if the QuantityUsed exceeds the TotalQuantity in the lot
-                    if (customerAllocation.QuantityUsed > lot.TotalQuantity)
+                    if (CustomerAllocation.QuantityUsed > lot.TotalQuantity)
                     {
                         ModelState.AddModelError(nameof(CustomerAllocation.QuantityUsed), "Quantity used exceeds the total quantity available in the lot.");
-                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
-                        return View(customerAllocation);
+                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", CustomerAllocation.LotNumber);
+                        return View(CustomerAllocation);
                     }
 
                     // Check if the AvailableQuantity would become negative after deduction
-                    if (lot.AvailableQuantity - customerAllocation.QuantityUsed < 0)
+                    if (lot.AvailableQuantity - CustomerAllocation.QuantityUsed < 0)
                     {
                         ModelState.AddModelError(string.Empty, "Deducting the quantity used would result in a negative available quantity.");
-                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
-                        return View(customerAllocation);
+                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", CustomerAllocation.LotNumber);
+                        return View(CustomerAllocation);
                     }
 
                     // Add the CustomerAllocation record to the database
-                    _context.Add(customerAllocation);
+                    _context.Add(CustomerAllocation);
                     await _context.SaveChangesAsync();
 
                     // Subtract the QuantityUsed from the AvailableQuantity
-                    lot.AvailableQuantity -= customerAllocation.QuantityUsed;
-
+                    lot.AvailableQuantity -= CustomerAllocation.QuantityUsed;
+                    
                     // Update the Lot record
                     _context.Update(lot);
                     await _context.SaveChangesAsync();
@@ -107,103 +107,115 @@ namespace FIMS2.Controllers
             catch
             {
                 ModelState.AddModelError(string.Empty, "An error occurred while processing your request.");
-                ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
-                return View(customerAllocation);
+                ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", CustomerAllocation.LotNumber);
+                return View(CustomerAllocation);
             }
 
-            return View(customerAllocation);
+            return View(CustomerAllocation);
         }
 
-        // GET: CustomerAllocations/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+//Commenting out the Edit Controller,It's not something to be utilized in the program at the moment.  May be implemented in the future, but for now we are okay with having CREATE and DELETE
 
-            var customerAllocation = await _context.CustomerAllocations.FindAsync(id);
-            if (customerAllocation == null)
-            {
-                return NotFound();
-            }
-            ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
-            return View(customerAllocation);
-        }
+//// GET: CustomerAllocations/Edit/5
+//public async Task<IActionResult> Edit(int? id)
+//{
+//    if (id == null)
+//    {
+//        return NotFound();
+//    }
 
-        // POST: CustomerAllocations/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AllocationID,CustomerNumber,QuantityUsed,LotNumber")] CustomerAllocation customerAllocation)
-        {
-            if (id != customerAllocation.AllocationID)
-            {
-                return NotFound();
-            }
+//    var customerAllocation = await _context.CustomerAllocations.FindAsync(id);
+//    if (customerAllocation == null)
+//    {
+//        return NotFound();
+//    }
+//    ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
+//    return View(customerAllocation);
+//}
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(customerAllocation);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CustomerAllocationExists(customerAllocation.AllocationID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
-            return View(customerAllocation);
-        }
+//// POST: CustomerAllocations/Edit/5
+//// To protect from overposting attacks, enable the specific properties you want to bind to.
+//// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+//[HttpPost]
+//[ValidateAntiForgeryToken]
+//        public async Task<IActionResult> Edit(int id, [Bind("AllocationID,CustomerNumber,QuantityUsed,LotNumber")] CustomerAllocation customerAllocation)
+//        {
+//            if (id != customerAllocation.AllocationID)
+//            {
+//                return NotFound();
+//            }
+
+//            if (ModelState.IsValid)
+//            {
+//                try
+//                {
+//                    _context.Update(customerAllocation);
+//                    await _context.SaveChangesAsync();
+//                }
+//                catch (DbUpdateConcurrencyException ex)
+//                {
+//                    var entry = ex.Entries.Single();
+//                    var databaseValues = entry.GetDatabaseValues();
+
+//                    if (databaseValues == null)
+//                    {
+//                        return NotFound();
+//                    }
+
+//                    var databaseAllocation = (CustomerAllocation)databaseValues.ToObject();
+//                    ModelState.AddModelError("", "The record you attempted to edit was modified by another user. The current values have been displayed. Please make your changes again.");
+//                    return View(customerAllocation);
+//                }
+//                return RedirectToAction(nameof(Index));
+//            }
+//            ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", customerAllocation.LotNumber);
+//            return View(customerAllocation);
+//        }
 
         // GET: CustomerAllocations/Delete/5
         public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+{
+    if (id == null)
+    {
+        return NotFound();
+    }
 
-            var customerAllocation = await _context.CustomerAllocations
-                .Include(c => c.Lot)
-                .FirstOrDefaultAsync(m => m.AllocationID == id);
-            if (customerAllocation == null)
-            {
-                return NotFound();
-            }
+    var customerAllocation = await _context.CustomerAllocations
+        .Include(c => c.Lot)
+        .FirstOrDefaultAsync(m => m.AllocationID == id);
+    if (customerAllocation == null)
+    {
+        return NotFound();
+    }
 
-            return View(customerAllocation);
-        }
+    return View(customerAllocation);
+}
 
-        // POST: CustomerAllocations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var customerAllocation = await _context.CustomerAllocations.FindAsync(id);
-            if (customerAllocation != null)
+            if (customerAllocation == null)
             {
-                _context.CustomerAllocations.Remove(customerAllocation);
+                return NotFound();
             }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            // Retrieve the corresponding Lot record
+            var lot = await _context.Lots.FirstOrDefaultAsync(l => l.LotNumber == customerAllocation.LotNumber);
 
-        private bool CustomerAllocationExists(int id)
-        {
-            return _context.CustomerAllocations.Any(e => e.AllocationID == id);
+            if (lot != null)
+            {
+                // Add QuantityUsed back to AvailableQuantity
+                lot.AvailableQuantity += customerAllocation.QuantityUsed;
+                _context.Update(lot);
+            }
+
+            // Remove the CustomerAllocation record
+            _context.CustomerAllocations.Remove(customerAllocation);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

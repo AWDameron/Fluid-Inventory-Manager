@@ -8,6 +8,7 @@
 
 <p>
     <a asp-action="Create">Create New</a>
+
 </p>
 <table class="table">
     <thead>
@@ -45,11 +46,13 @@
                     @Html.DisplayFor(modelItem => item.Lot.LotName)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.AllocationID">Edit</a> |
+                <!--   <a asp-action="Edit" asp-route-id="@item.AllocationID">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.AllocationID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.AllocationID">Delete</a>
+                -->
+                <a asp-action="Delete" asp-route-id="@item.AllocationID">Delete</a>  
                 </td>
             </tr>
         }
+        
     </tbody>
 </table>

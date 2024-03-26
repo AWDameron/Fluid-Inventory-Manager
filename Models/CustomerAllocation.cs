@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -21,6 +22,7 @@ namespace FIMS2.Models
         [DisplayName("Fluid Lot Number")]
         public string LotNumber { get; set; }
 
+        [BindNever]
         public Lot Lot { get; set; } 
     }
 }
