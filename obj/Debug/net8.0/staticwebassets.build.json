@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/WE4+pBacOsm65/0x8TFQkwkt2rDYuCy7JMEJNvhEic=",
+  "Hash": "MXfR0S272RSvGwd1+GpuJsnthuPAD/FkrEFNtUwlR4c=",
   "Source": "FIMS2",
   "BasePath": "_content/FIMS2",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\wwwroot\\css\\TablesIndex.css",
+      "SourceId": "FIMS2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\wwwroot\\",
+      "BasePath": "_content/FIMS2",
+      "RelativePath": "css/TablesIndex.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\TablesIndex.css"
     },
     {
       "Identity": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\wwwroot\\favicon.ico",

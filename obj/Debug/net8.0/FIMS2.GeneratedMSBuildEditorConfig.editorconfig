@@ -26,6 +26,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Awdam\Documents\Projects\FIMS2\FIMS2
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Unused/Views/CustomerAllocationsViews/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VW51c2VkXFZpZXdzXEN1c3RvbWVyQWxsb2NhdGlvbnNWaWV3c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Unused/Views/CustomerAllocationsViews/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VW51c2VkXFZpZXdzXEN1c3RvbWVyQWxsb2NhdGlvbnNWaWV3c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Unused/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VW51c2VkXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Unused/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VW51c2VkXFZpZXdzXEhvbWVcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Unused/Views/LotsViews/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VW51c2VkXFZpZXdzXExvdHNWaWV3c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Views/CustomerAllocations/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBbGxvY2F0aW9uc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,24 +54,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBbGxvY2F0aW9uc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Views/CustomerAllocations/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBbGxvY2F0aW9uc1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Views/CustomerAllocations/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBbGxvY2F0aW9uc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Views/CustomerAllocations/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBbGxvY2F0aW9uc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Views/Lots/Create.cshtml]
@@ -60,10 +64,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Views/Lots/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG90c1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Views/Lots/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG90c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Awdam/Documents/Projects/FIMS2/FIMS2/Views/Lots/Edit.cshtml]

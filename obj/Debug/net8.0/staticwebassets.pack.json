@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\FIMS2.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\wwwroot\\css\\TablesIndex.css",
+      "PackagePath": "staticwebassets\\css\\TablesIndex.css"
+    },
+    {
       "Id": "C:\\Users\\Awdam\\Documents\\Projects\\FIMS2\\FIMS2\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
