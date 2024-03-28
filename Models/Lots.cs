@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace FIMS2.Models
 {
@@ -13,10 +14,9 @@ namespace FIMS2.Models
         [Required]
         [DisplayName("Fluid Name")]
         public string LotName { get; set; }
-       
+
         [DisplayName("Notes")]
         public string LotNotes { get; set; }
-        
         
         [Required]
         [DisplayName("Total Quantity")]

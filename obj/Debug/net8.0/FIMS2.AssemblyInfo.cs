@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FIMS2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da3258eaee5f6d8d056c17b9bc09e40e1f3b3d93")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15a3ad4229dd2075bd4135a4b7120ebc70b11755")]
 [assembly: System.Reflection.AssemblyProductAttribute("FIMS2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FIMS2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

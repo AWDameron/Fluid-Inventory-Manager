@@ -63,7 +63,6 @@ namespace FIMS2.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LotNotes")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("TotalQuantity")

@@ -25,7 +25,7 @@ namespace FIMS2.Controllers
             return View(await _context.Lots
                 .Where(x => x.IsActive == true)
                 .ToListAsync());
-             
+
         }
 
         // GET: Lots/Details/5
@@ -57,14 +57,26 @@ namespace FIMS2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LotNumber,LotName,LotNotes,TotalQuantity,AvailableQuantity,DateOnly")] Lot lot)
+        public async Task<IActionResult> Create([Bind("LotNumber,LotName,LotNotes, TotalQuantity,AvailableQuantity,DateOnly")] Lot lot)
         {
+            
+
             if (ModelState.IsValid)
             {
+                if (lot.TotalQuantity < 0)
+                {
+                    // verifies if total quantity is greater than 0
+                    ModelState.AddModelError(nameof(Lot.TotalQuantity), "Total quantity cannot be below 0.");
+                    return View(lot);
+                }
+
+                // Set AvailableQuantity and save changes only if ModelState is valid
+                lot.AvailableQuantity = lot.TotalQuantity;
                 _context.Add(lot);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(lot);
         }
 
@@ -89,7 +101,7 @@ namespace FIMS2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("LotNumber,LotName,LotNotes,TotalQuantity,AvailableQuantity,DateOnly")] Lot lot)
+        public async Task<IActionResult> Edit(string id, [Bind("LotNumber,AvailableQuantity,TotalQuantity,LotName,LotNotes")] Lot lot)
         {
             if (id != lot.LotNumber)
             {

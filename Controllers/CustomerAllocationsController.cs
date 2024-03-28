@@ -59,6 +59,8 @@ namespace FIMS2.Controllers
         public async Task<IActionResult> Create([Bind("AllocationID,CustomerNumber,QuantityUsed,LotNumber")] CustomerAllocation CustomerAllocation)
         {
             ModelState.Remove(nameof(CustomerAllocation.Lot));
+            ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", CustomerAllocation.LotNumber);
+
             try
             {
                 if (ModelState.IsValid)
@@ -70,7 +72,12 @@ namespace FIMS2.Controllers
                     {
                         // Lot does not exist
                         ModelState.AddModelError(string.Empty, "Lot not found.");
-                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", CustomerAllocation.LotNumber);
+                        return View(CustomerAllocation);
+                    }
+
+                    if (CustomerAllocation.QuantityUsed < 0)
+                    {
+                        ModelState.AddModelError(nameof(CustomerAllocation.QuantityUsed), "Quantity used cannot be a negative number");
                         return View(CustomerAllocation);
                     }
 
@@ -78,7 +85,6 @@ namespace FIMS2.Controllers
                     if (CustomerAllocation.QuantityUsed > lot.TotalQuantity)
                     {
                         ModelState.AddModelError(nameof(CustomerAllocation.QuantityUsed), "Quantity used exceeds the total quantity available in the lot.");
-                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", CustomerAllocation.LotNumber);
                         return View(CustomerAllocation);
                     }
 
@@ -86,7 +92,6 @@ namespace FIMS2.Controllers
                     if (lot.AvailableQuantity - CustomerAllocation.QuantityUsed < 0)
                     {
                         ModelState.AddModelError(string.Empty, "Deducting the quantity used would result in a negative available quantity.");
-                        ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", CustomerAllocation.LotNumber);
                         return View(CustomerAllocation);
                     }
 

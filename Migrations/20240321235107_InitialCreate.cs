@@ -17,7 +17,7 @@ namespace FIMS2.Migrations
                 {
                     LotNumber = table.Column<string>(type: "TEXT", nullable: false),
                     LotName = table.Column<string>(type: "TEXT", nullable: false),
-                    LotNotes = table.Column<string>(type: "TEXT", nullable: false),
+                    LotNotes = table.Column<string>(type: "TEXT", nullable: true),
                     TotalQuantity = table.Column<int>(type: "INTEGER", nullable: false),
                     AvailableQuantity = table.Column<int>(type: "INTEGER", nullable: false),
                     DateOnly = table.Column<DateOnly>(type: "TEXT", nullable: false),

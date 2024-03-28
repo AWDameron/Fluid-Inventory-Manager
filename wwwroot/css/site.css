@@ -27,5 +27,10 @@ body {
     font-size: 60px;
 }
 
+.button {
+    background-color: #04AA6D;
+    border: 5px solid black;
+
+}
 
 
