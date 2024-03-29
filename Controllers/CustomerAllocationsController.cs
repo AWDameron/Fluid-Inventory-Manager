@@ -47,9 +47,15 @@ namespace FIMS2.Controllers
         }
 
         // GET: CustomerAllocations/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewData["LotNumber"] = new SelectList(_context.Lots.Where(x => x.IsActive == true), "LotNumber", "LotNumber");
+            ViewData["LotNumber"] = new SelectList(await _context.Lots
+                .Where(l => l.IsActive)
+                .Select(l => new {
+                    Value = l.LotNumber,
+                    Text = $"{l.LotNumber} - {l.LotName}"
+                }).ToListAsync(), "Value", "Text");
+
             return View();
         }
 
@@ -59,7 +65,10 @@ namespace FIMS2.Controllers
         public async Task<IActionResult> Create([Bind("AllocationID,CustomerNumber,QuantityUsed,LotNumber")] CustomerAllocation CustomerAllocation)
         {
             ModelState.Remove(nameof(CustomerAllocation.Lot));
-            ViewData["LotNumber"] = new SelectList(_context.Lots, "LotNumber", "LotNumber", CustomerAllocation.LotNumber);
+            var lots = await _context.Lots
+            .Select(l => new { Value = l.LotNumber, Text = $"{l.LotNumber} - {l.LotName}" })
+            .ToListAsync();
+            ViewData["LotNumber"] = new SelectList(lots, "Value", "Text");
 
             try
             {

@@ -59,7 +59,13 @@ namespace FIMS2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("LotNumber,LotName,LotNotes, TotalQuantity,AvailableQuantity,DateOnly")] Lot lot)
         {
-            
+            var existingLot = await _context.Lots.FirstOrDefaultAsync(l => l.LotNumber == lot.LotNumber);
+            if (existingLot != null)
+            {
+                ModelState.AddModelError(nameof(Lot.LotNumber), "Lot number already exists.");
+                return View(lot);
+            }
+
 
             if (ModelState.IsValid)
             {
@@ -101,9 +107,9 @@ namespace FIMS2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("LotNumber,AvailableQuantity,TotalQuantity,LotName,LotNotes")] Lot lot)
+        public async Task<IActionResult> Edit(string id, Lot editedLot)
         {
-            if (id != lot.LotNumber)
+            if (id != editedLot.LotNumber)
             {
                 return NotFound();
             }
@@ -112,12 +118,24 @@ namespace FIMS2.Controllers
             {
                 try
                 {
-                    _context.Update(lot);
+                    // Retrieve the existing lot from the database
+                    var existingLot = await _context.Lots.FindAsync(id);
+                    if (existingLot == null)
+                    {
+                        return NotFound();
+                    }
+
+                    // Update only the editable properties
+                    existingLot.LotName = editedLot.LotName;
+                    existingLot.LotNotes = editedLot.LotNotes;
+
+                    // Save changes
+                    _context.Update(existingLot);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!LotExists(lot.LotNumber))
+                    if (!LotExists(editedLot.LotNumber))
                     {
                         return NotFound();
                     }
@@ -128,7 +146,7 @@ namespace FIMS2.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(lot);
+            return View(editedLot);
         }
 
         // GET: Lots/Delete/5

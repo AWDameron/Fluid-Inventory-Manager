@@ -24,19 +24,19 @@
                 <input asp-for="LotNotes" class="form-control" />
                 <span asp-validation-for="LotNotes" class="text-danger"></span>
             </div>
-           <div class="form-group">
+            <div class="form-group" >
                 <label asp-for="TotalQuantity" class="control-label"></label>
-                <input asp-for="TotalQuantity" class="form-control" />
+                <input asp-for="TotalQuantity" class="form-control" readonly/>
                 <span asp-validation-for="TotalQuantity" class="text-danger"></span>
             </div> 
-            <div class="form-group">
+            <div class="form-group" >
                 <label asp-for="AvailableQuantity" class="control-label"></label>
-                <input asp-for="AvailableQuantity" class="form-control" />
+                <input asp-for="AvailableQuantity" class="form-control" readonly/>
                 <span asp-validation-for="AvailableQuantity" class="text-danger"></span>
             </div> 
             <div class="form-group">
                 <label asp-for="DateOnly" class="control-label"></label>
-                <input asp-for="DateOnly" class="form-control" />
+                <input asp-for="DateOnly" class="form-control" type="date" readonly/>
                 <span asp-validation-for="DateOnly" class="text-danger"></span>
             </div>
             <div class="form-group">
